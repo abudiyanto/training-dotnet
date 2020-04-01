@@ -24,5 +24,10 @@ namespace Training.Controllers
             };
             return View(person);
         }
+        public ActionResult Looping(int number)
+        {
+            ViewBag.Statement = "Hello World!";
+            return View(number);
+        }
     }
 }
