@@ -13,5 +13,6 @@ namespace Training.Models
         public string Name { get; set; }
         public string Descriptions { get; set; }
         public int Wheel { get; set; }
+        public string Color { get; set; }
     }
 }
