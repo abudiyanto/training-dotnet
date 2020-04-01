@@ -29,5 +29,31 @@ namespace Training.Controllers
             ViewBag.Statement = "Hello World!";
             return View(number);
         }
+        public ActionResult Conditional(string name)
+        {
+            string answer = "bambang";
+            if(name != null)
+            {
+                if(name.Equals(answer))
+                {
+                    return Content("Hello " + name);
+                }
+                else
+                {
+                    return Content("I'm Sorry");
+                }
+            }
+            return Content("Please input name!");
+        }
+        public ActionResult Json()
+        {
+            var person = new Person()
+            {
+                IdPerson = "123",
+                Address = "Babarsari",
+                FullName = "Bambang"
+            };
+            return Json(person, JsonRequestBehavior.AllowGet);
+        }
     }
 }
