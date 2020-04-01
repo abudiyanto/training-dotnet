@@ -29,5 +29,7 @@ namespace Training.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Training.Models.Vehicle> Vehicles { get; set; }
     }
 }
