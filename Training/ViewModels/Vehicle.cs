@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Training.Models
+namespace Training.ViewModels
 {
-    public class Vehicle
+    public class AddVehicle
     {
-        [Key]
-        public string IdVehicle { get; set; }
         public string Name { get; set; }
         public string Descriptions { get; set; }
         public int Wheel { get; set; }
@@ -18,12 +15,6 @@ namespace Training.Models
         public int Capacity { get; set; }
         public string RegistrationNumber { get; set; }
         public string Year { get; set; }
-        public Category Category { get; set; }
-    }
-    public class Category
-    {
-        [Key]
-        public string IdCategory { get; set; }
-        public string Title { get; set; }
+        public string Category { get; set; }
     }
 }

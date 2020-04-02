@@ -10,134 +10,107 @@ using Training.Models;
 
 namespace Training.Controllers
 {
-    public class VehiclesController : Controller
+    public class CategoriesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Vehicles
+        // GET: Categories
         public ActionResult Index()
         {
-            return View(db.Vehicles.ToList());
+            return View(db.Categories.ToList());
         }
 
-        // GET: Vehicles/Details/5
+        // GET: Categories/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var vehicle = db.Vehicles.Include("Category").Where(x => x.IdVehicle == id)
-                .SingleOrDefault();
-            if (vehicle == null)
+            Category category = db.Categories.Find(id);
+            if (category == null)
             {
                 return HttpNotFound();
             }
-            return View(vehicle);
+            return View(category);
         }
 
-        // GET: Vehicles/Create
+        // GET: Categories/Create
         public ActionResult Create()
         {
-            var categories = db.Categories.Select(i => new SelectListItem()
-            {
-                Text = i.Title,
-                Value = i.IdCategory,
-                Selected = false
-            }).ToArray();
-            ViewBag.Categories = categories;
             return View();
         }
 
-        // POST: Vehicles/Create
+        // POST: Categories/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(ViewModels.AddVehicle addVehicle)
+        public ActionResult Create([Bind(Include = "IdCategory,Title")] Category category)
         {
             if (ModelState.IsValid)
             {
-                var category = db.Categories.Find(addVehicle.Category);
-                if(category != null)
-                {
-                    var vehicle = new Vehicle()
-                    {
-                        IdVehicle = Guid.NewGuid().ToString(),
-                        Name = addVehicle.Name,
-                        Capacity = addVehicle.Capacity,
-                        Category = category,
-                        Color = addVehicle.Color,
-                        Descriptions = addVehicle.Descriptions,
-                        Fuel = addVehicle.Fuel,
-                        RegistrationNumber = addVehicle.RegistrationNumber,
-                        Wheel = addVehicle.Wheel,
-                        Year = addVehicle.Year
-                    };
-                    db.Vehicles.Add(vehicle);
-                    var result = db.SaveChanges();
-                    if(result > 0)
-                    {
-                        return RedirectToAction("Index");
-                    }
-                }
+                db.Categories.Add(category);
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
-            return View(addVehicle);
+
+            return View(category);
         }
 
-        // GET: Vehicles/Edit/5
+        // GET: Categories/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vehicle vehicle = db.Vehicles.Find(id);
-            if (vehicle == null)
+            Category category = db.Categories.Find(id);
+            if (category == null)
             {
                 return HttpNotFound();
             }
-            return View(vehicle);
+            return View(category);
         }
 
-        // POST: Vehicles/Edit/5
+        // POST: Categories/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Vehicle vehicle)
+        public ActionResult Edit([Bind(Include = "IdCategory,Title")] Category category)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(vehicle).State = EntityState.Modified;
+                db.Entry(category).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(vehicle);
+            return View(category);
         }
 
-        // GET: Vehicles/Delete/5
+        // GET: Categories/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vehicle vehicle = db.Vehicles.Find(id);
-            if (vehicle == null)
+            Category category = db.Categories.Find(id);
+            if (category == null)
             {
                 return HttpNotFound();
             }
-            return View(vehicle);
+            return View(category);
         }
 
-        // POST: Vehicles/Delete/5
+        // POST: Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Vehicle vehicle = db.Vehicles.Find(id);
-            db.Vehicles.Remove(vehicle);
+            Category category = db.Categories.Find(id);
+            db.Categories.Remove(category);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

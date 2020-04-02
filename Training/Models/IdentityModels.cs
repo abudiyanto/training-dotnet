@@ -31,5 +31,7 @@ namespace Training.Models
         }
 
         public System.Data.Entity.DbSet<Training.Models.Vehicle> Vehicles { get; set; }
+
+        public System.Data.Entity.DbSet<Training.Models.Category> Categories { get; set; }
     }
 }
