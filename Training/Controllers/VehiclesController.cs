@@ -46,7 +46,7 @@ namespace Training.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdVehicle,Name,Descriptions,Wheel")] Vehicle vehicle)
+        public ActionResult Create(Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Training.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdVehicle,Name,Descriptions,Wheel")] Vehicle vehicle)
+        public ActionResult Edit(Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {

@@ -14,5 +14,9 @@ namespace Training.Models
         public string Descriptions { get; set; }
         public int Wheel { get; set; }
         public string Color { get; set; }
+        public string Fuel { get; set; }
+        public int Capacity { get; set; }
+        public string RegistrationNumber { get; set; }
+        public string Year { get; set; }
     }
 }
