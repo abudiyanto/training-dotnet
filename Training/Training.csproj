@@ -179,17 +179,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004010838534_InitialCreate.cs" />
-    <Compile Include="Migrations\202004010838534_InitialCreate.Designer.cs">
-      <DependentUpon>202004010838534_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004030204232_v1.cs" />
-    <Compile Include="Migrations\202004030204232_v1.Designer.cs">
-      <DependentUpon>202004030204232_v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004030255202_UpdateCapacityModel.cs" />
-    <Compile Include="Migrations\202004030255202_UpdateCapacityModel.Designer.cs">
-      <DependentUpon>202004030255202_UpdateCapacityModel.cs</DependentUpon>
+    <Compile Include="Migrations\202004030357077_Initial.cs" />
+    <Compile Include="Migrations\202004030357077_Initial.Designer.cs">
+      <DependentUpon>202004030357077_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -302,14 +294,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004010838534_InitialCreate.resx">
-      <DependentUpon>202004010838534_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004030204232_v1.resx">
-      <DependentUpon>202004030204232_v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004030255202_UpdateCapacityModel.resx">
-      <DependentUpon>202004030255202_UpdateCapacityModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004030357077_Initial.resx">
+      <DependentUpon>202004030357077_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
