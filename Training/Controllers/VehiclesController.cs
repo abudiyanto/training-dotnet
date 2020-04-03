@@ -10,11 +10,13 @@ using Training.Models;
 
 namespace Training.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class VehiclesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Vehicles
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Vehicles.ToList());
