@@ -33,5 +33,8 @@ namespace Training.Models
         public System.Data.Entity.DbSet<Training.Models.Vehicle> Vehicles { get; set; }
 
         public System.Data.Entity.DbSet<Training.Models.Category> Categories { get; set; }
+        public System.Data.Entity.DbSet<Training.Models.Year> Years { get; set; }
+        public System.Data.Entity.DbSet<Training.Models.Color> Colors { get; set; }
+        public System.Data.Entity.DbSet<Training.Models.Fuel> Fuels { get; set; }
     }
 }

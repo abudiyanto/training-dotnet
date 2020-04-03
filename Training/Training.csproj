@@ -180,29 +180,9 @@
     <Compile Include="Migrations\202004010838534_InitialCreate.Designer.cs">
       <DependentUpon>202004010838534_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004010902194_VehicleV2.cs" />
-    <Compile Include="Migrations\202004010902194_VehicleV2.Designer.cs">
-      <DependentUpon>202004010902194_VehicleV2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004020302454_VehicleV3.cs" />
-    <Compile Include="Migrations\202004020302454_VehicleV3.Designer.cs">
-      <DependentUpon>202004020302454_VehicleV3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004020409002_VehicleV4.cs" />
-    <Compile Include="Migrations\202004020409002_VehicleV4.Designer.cs">
-      <DependentUpon>202004020409002_VehicleV4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004020424282_VehicleV5.cs" />
-    <Compile Include="Migrations\202004020424282_VehicleV5.Designer.cs">
-      <DependentUpon>202004020424282_VehicleV5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004020427262_VehicleV6.cs" />
-    <Compile Include="Migrations\202004020427262_VehicleV6.Designer.cs">
-      <DependentUpon>202004020427262_VehicleV6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004020621493_VehicleV7.cs" />
-    <Compile Include="Migrations\202004020621493_VehicleV7.Designer.cs">
-      <DependentUpon>202004020621493_VehicleV7.cs</DependentUpon>
+    <Compile Include="Migrations\202004030204232_v1.cs" />
+    <Compile Include="Migrations\202004030204232_v1.Designer.cs">
+      <DependentUpon>202004030204232_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -303,23 +283,8 @@
     <EmbeddedResource Include="Migrations\202004010838534_InitialCreate.resx">
       <DependentUpon>202004010838534_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004010902194_VehicleV2.resx">
-      <DependentUpon>202004010902194_VehicleV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004020302454_VehicleV3.resx">
-      <DependentUpon>202004020302454_VehicleV3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004020409002_VehicleV4.resx">
-      <DependentUpon>202004020409002_VehicleV4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004020424282_VehicleV5.resx">
-      <DependentUpon>202004020424282_VehicleV5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004020427262_VehicleV6.resx">
-      <DependentUpon>202004020427262_VehicleV6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004020621493_VehicleV7.resx">
-      <DependentUpon>202004020621493_VehicleV7.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004030204232_v1.resx">
+      <DependentUpon>202004030204232_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
