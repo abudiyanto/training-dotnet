@@ -14,7 +14,6 @@ namespace Training.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Vehicles
         public ActionResult Index()
         {
             return View(db.Vehicles.ToList());
@@ -35,7 +34,6 @@ namespace Training.Controllers
             }
             return View(vehicle);
         }
-
         // GET: Vehicles/Create
         public ActionResult Create()
         {
@@ -92,12 +90,33 @@ namespace Training.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vehicle vehicle = db.Vehicles.Find(id);
+            Vehicle vehicle = db.Vehicles.Include("Category").Where(x => x.IdVehicle == id)
+                .SingleOrDefault();
             if (vehicle == null)
             {
                 return HttpNotFound();
             }
-            return View(vehicle);
+            else
+            {
+                var categories = db.Categories.Select(i => new SelectListItem()
+                {
+                    Text = i.Title,
+                    Value = i.IdCategory,
+                    Selected = false
+                }).ToArray();
+                foreach(var item in categories)
+                {
+                    if(vehicle.Category != null)
+                    {
+                        if (item.Value == vehicle.Category.IdCategory)
+                        {
+                            item.Selected = true;
+                        }
+                    }
+                }
+                ViewBag.Categories = categories;
+                return View(vehicle);
+            }
         }
 
         // POST: Vehicles/Edit/5
@@ -105,15 +124,28 @@ namespace Training.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Vehicle vehicle)
+        public ActionResult Edit(ViewModels.EditVehicle editVehicle)
         {
             if (ModelState.IsValid)
             {
+                var vehicle = db.Vehicles.Include("Category").Where(x => x.IdVehicle == editVehicle.IdVehicle)
+                    .SingleOrDefault();
+                var category = db.Categories.Find(editVehicle.Category);
+                if(vehicle != null)
+                {
+                    vehicle.Category = category;
+                    vehicle.Color = editVehicle.Color;
+                    vehicle.Year = editVehicle.Year;
+                    vehicle.Name = editVehicle.Name;
+                    vehicle.Wheel = editVehicle.Wheel;
+                    vehicle.Descriptions = editVehicle.Descriptions;
+                    vehicle.Capacity = editVehicle.Capacity;
+                }
                 db.Entry(vehicle).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(vehicle);
+            return View(editVehicle);
         }
 
         // GET: Vehicles/Delete/5

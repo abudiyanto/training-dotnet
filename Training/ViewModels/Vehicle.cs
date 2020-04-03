@@ -17,4 +17,17 @@ namespace Training.ViewModels
         public string Year { get; set; }
         public string Category { get; set; }
     }
+    public class EditVehicle
+    {
+        public string IdVehicle { get; set; }
+        public string Name { get; set; }
+        public string Descriptions { get; set; }
+        public int Wheel { get; set; }
+        public string Color { get; set; }
+        public string Fuel { get; set; }
+        public int Capacity { get; set; }
+        public string RegistrationNumber { get; set; }
+        public string Year { get; set; }
+        public string Category { get; set; }
+    }
 }
