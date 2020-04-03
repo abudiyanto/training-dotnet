@@ -169,10 +169,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\ColorsController.cs" />
+    <Compile Include="Controllers\FuelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PersonsController.cs" />
     <Compile Include="Controllers\VehiclesController.cs" />
+    <Compile Include="Controllers\YearsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -180,29 +183,9 @@
     <Compile Include="Migrations\202004010838534_InitialCreate.Designer.cs">
       <DependentUpon>202004010838534_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004010902194_VehicleV2.cs" />
-    <Compile Include="Migrations\202004010902194_VehicleV2.Designer.cs">
-      <DependentUpon>202004010902194_VehicleV2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004020302454_VehicleV3.cs" />
-    <Compile Include="Migrations\202004020302454_VehicleV3.Designer.cs">
-      <DependentUpon>202004020302454_VehicleV3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004020409002_VehicleV4.cs" />
-    <Compile Include="Migrations\202004020409002_VehicleV4.Designer.cs">
-      <DependentUpon>202004020409002_VehicleV4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004020424282_VehicleV5.cs" />
-    <Compile Include="Migrations\202004020424282_VehicleV5.Designer.cs">
-      <DependentUpon>202004020424282_VehicleV5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004020427262_VehicleV6.cs" />
-    <Compile Include="Migrations\202004020427262_VehicleV6.Designer.cs">
-      <DependentUpon>202004020427262_VehicleV6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004020621493_VehicleV7.cs" />
-    <Compile Include="Migrations\202004020621493_VehicleV7.Designer.cs">
-      <DependentUpon>202004020621493_VehicleV7.cs</DependentUpon>
+    <Compile Include="Migrations\202004030204232_v1.cs" />
+    <Compile Include="Migrations\202004030204232_v1.Designer.cs">
+      <DependentUpon>202004030204232_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202004030255202_UpdateCapacityModel.cs" />
     <Compile Include="Migrations\202004030255202_UpdateCapacityModel.Designer.cs">
@@ -286,6 +269,21 @@
     <Content Include="Views\Categories\Index.cshtml" />
     <Content Include="Views\Categories\Create.cshtml" />
     <Content Include="Views\Vehicles\Create.cshtml" />
+    <Content Include="Views\Colors\Create.cshtml" />
+    <Content Include="Views\Colors\Delete.cshtml" />
+    <Content Include="Views\Colors\Details.cshtml" />
+    <Content Include="Views\Colors\Edit.cshtml" />
+    <Content Include="Views\Colors\Index.cshtml" />
+    <Content Include="Views\Years\Create.cshtml" />
+    <Content Include="Views\Years\Delete.cshtml" />
+    <Content Include="Views\Years\Details.cshtml" />
+    <Content Include="Views\Years\Edit.cshtml" />
+    <Content Include="Views\Years\Index.cshtml" />
+    <Content Include="Views\Fuels\Create.cshtml" />
+    <Content Include="Views\Fuels\Delete.cshtml" />
+    <Content Include="Views\Fuels\Details.cshtml" />
+    <Content Include="Views\Fuels\Edit.cshtml" />
+    <Content Include="Views\Fuels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -307,23 +305,8 @@
     <EmbeddedResource Include="Migrations\202004010838534_InitialCreate.resx">
       <DependentUpon>202004010838534_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004010902194_VehicleV2.resx">
-      <DependentUpon>202004010902194_VehicleV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004020302454_VehicleV3.resx">
-      <DependentUpon>202004020302454_VehicleV3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004020409002_VehicleV4.resx">
-      <DependentUpon>202004020409002_VehicleV4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004020424282_VehicleV5.resx">
-      <DependentUpon>202004020424282_VehicleV5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004020427262_VehicleV6.resx">
-      <DependentUpon>202004020427262_VehicleV6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004020621493_VehicleV7.resx">
-      <DependentUpon>202004020621493_VehicleV7.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004030204232_v1.resx">
+      <DependentUpon>202004030204232_v1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004030255202_UpdateCapacityModel.resx">
       <DependentUpon>202004030255202_UpdateCapacityModel.cs</DependentUpon>

@@ -7,13 +7,13 @@ namespace Training.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class VehicleV4 : IMigrationMetadata
+    public sealed partial class v1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(VehicleV4));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(v1));
         
         string IMigrationMetadata.Id
         {
-            get { return "202004020409002_VehicleV4"; }
+            get { return "202004030204232_v1"; }
         }
         
         string IMigrationMetadata.Source
