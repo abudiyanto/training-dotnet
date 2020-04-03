@@ -53,6 +53,9 @@ namespace Training.Migrations
                 manager.AddToRoles(customer.Id, new string[] { "Customer" });
             }
 
+            //TO:DO 
+            //Buat 2 akun user dengan role Administrator dan Customer 
+            //Implement otorisasi dan role nya di Controller dan Action yang pernah dibuat 
 
             //  This method will be called after migrating to the latest version.
 

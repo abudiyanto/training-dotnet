@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,14 +8,23 @@ namespace Training.ViewModels
 {
     public class AddVehicle
     {
+        [Required(ErrorMessage = "Nama Tidak Boleh Kosong")]
         public string Name { get; set; }
+        [Required]
         public string Descriptions { get; set; }
+        [Required]
         public int Wheel { get; set; }
+        [Required]
         public string Color { get; set; }
+        [Required]
         public string Fuel { get; set; }
+        [Required]
         public int Capacity { get; set; }
+        [Required]
         public string RegistrationNumber { get; set; }
+        [Required]
         public string Year { get; set; }
+        [Required]
         public string Category { get; set; }
     }
     public class EditVehicle

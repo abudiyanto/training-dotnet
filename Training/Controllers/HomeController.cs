@@ -26,5 +26,9 @@ namespace Training.Controllers
 
             return View();
         }
+        public ActionResult TestView()
+        {
+            return View();
+        }
     }
 }

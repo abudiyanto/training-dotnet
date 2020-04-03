@@ -1,0 +1,285 @@
+﻿<ul id="sidebarnav">
+    <li class="nav-small-cap">ADMINISTRASI</li>
+    @if (Request.Url.Host.Contains("iis2019.id"))
+    {
+        <li>
+            <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-folder-star"></i><span class="hide-menu">Kabupaten / Kota</span></a>
+        </li>
+    }
+    else
+    {
+        <li>
+            <a href="@Url.Action("Hosts", "Administrators")"><i class="mdi mdi-folder-star"></i><span class="hide-menu">Kabupaten / Kota</span></a>
+        </li>
+    }
+    <li class="mb-10"></li>
+    @if (Request.Url.Host.Contains("iis2019.id"))
+    {
+        <li>
+            <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-view-list"></i><span class="hide-menu">Fasilitas Kesehatan</span></a>
+        </li>
+    }
+    else
+    {
+        <li>
+            <a href="@Url.Action("Organizers", "Administrators")"><i class="mdi mdi-view-list"></i><span class="hide-menu">Fasilitas Kesehatan</span></a>
+        </li>
+    }
+    <li class="mb-10"></li>
+    @*@if (Request.Url.Host.Contains("iis2019.id"))
+        {
+            <li>
+                <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Peserta</span></a>
+            </li>
+        }
+        else
+        {
+            <li>
+                <a href="@Url.Action("Participants", "Administrators")"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Peserta</span></a>
+            </li>
+        }
+        <li class="mb-10"></li>
+        @if (Request.Url.Host.Contains("iis2019.id"))
+        {
+            <li>
+                <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-star-circle"></i><span class="hide-menu">Sponsor</span></a>
+            </li>
+        }
+        else
+        {
+            <li>
+                <a href="@Url.Action("Sponsors", "Administrators")"><i class="mdi mdi-star-circle"></i><span class="hide-menu">Sponsor</span></a>
+            </li>
+        }*@
+    <li class="mb-10"></li>
+    @if (Request.Url.Host.Contains("iis2019.id"))
+    {
+        <li>
+            <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-theater"></i><span class="hide-menu">Kegiatan</span></a>
+        </li>
+    }
+    else
+    {
+        <li>
+            <a href="@Url.Action("Events", "Administrators")"><i class="mdi mdi-theater"></i><span class="hide-menu">Kegiatan</span></a>
+        </li>
+    }
+    <li class="mb-10"></li>
+
+    <li>
+        <a href="@Url.Action("ListSchedules", "Administrators")"><i class="fa fa-database"></i><span class="hide-menu">Jadwal</span></a>
+    </li>
+    <li>
+        <a href="@Url.Action("Participant", "Administrators")"><i class="mdi mdi-view-column"></i><span class="hide-menu">Daftar Peserta</span></a>
+    </li>
+    @*@if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-face"></i><span class="hide-menu">Speakers</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("Speakers", "Administrators")"><i class="mdi mdi-face"></i><span class="hide-menu">Speakers</span></a>
+                </li>
+            }
+
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-certificate"></i><span class="hide-menu">Certificate</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("Certificates", "Administrators")"><i class="mdi mdi-certificate"></i><span class="hide-menu">Certificate</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-bank"></i><span class="hide-menu">Bank</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("Banks", "Administrators")"><i class="mdi mdi-bank"></i><span class="hide-menu">Bank</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-bank"></i><span class="hide-menu">Biaya Admin</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("PaymentCharges", "Administrators")"><i class="fa fa-money"></i><span class="hide-menu"> Biaya Admin</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-bank"></i><span class="hide-menu">Bagi Hasil</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("ProfitSharing", "Administrators")"><i class="icon-wallet"></i><span class="hide-menu">Bagi Hasil</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-tag"></i><span class="hide-menu">Tags</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("Tags", "Administrators")"><i class="mdi mdi-tag"></i><span class="hide-menu">Tags</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-access-point"></i><span class="hide-menu">Broadcast</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("BroadcastHosts", "Administrators")"><i class="mdi mdi-access-point"></i><span class="hide-menu">Broadcast</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+
+        </ul>
+        <ul id="sidebarnav">
+            <li class="nav-small-cap">UPDATE</li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-newspaper"></i><span class="hide-menu">Newsletter</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("Newsletters", "Administrators")"><i class="mdi mdi-newspaper"></i><span class="hide-menu">Newsletter</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-email-variant"></i><span class="hide-menu">Program Email</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("ProgramEmails", "Administrators")"><i class="mdi mdi-email-variant"></i><span class="hide-menu">Program Email</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-map-marker"></i><span class="hide-menu">Lokasi</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("Locations", "Administrators")"><i class="mdi mdi-map-marker"></i><span class="hide-menu">Lokasi</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-calendar-multiple"></i><span class="hide-menu">Pekerjaan</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("Jobs", "Administrators")"><i class="mdi mdi-calendar-multiple"></i><span class="hide-menu">Pekerjaan</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-elevation-rise"></i><span class="hide-menu">Level Sponsors</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("SponsorLevels", "Administrators")"><i class="mdi mdi-elevation-rise"></i><span class="hide-menu">Level Sponsors</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-domain"></i><span class="hide-menu">Provinsi</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("Provinces", "Administrators")"><i class="mdi mdi-domain"></i><span class="hide-menu">Provinsi</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-apps"></i><span class="hide-menu">Kategori</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("Categories", "Administrators")"><i class="mdi mdi-apps"></i><span class="hide-menu">Kategori</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+            <li class="mb-10"></li>
+            @if (Request.Url.Host.Contains("iis2019.id"))
+            {
+                <li>
+                    <a href="@Url.Action("Index", "Admin")"><i class="mdi mdi-message-draw"></i><span class="hide-menu">Email Template</span></a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="@Url.Action("EmailTemplates", "Administrators")"><i class="mdi mdi-message-draw"></i><span class="hide-menu">Email Template</span></a>
+                </li>
+            }
+            <li class="mb-10"></li>
+            <li class="mb-10"></li>
+            <br /><br />*@
+
+</ul>
+
+

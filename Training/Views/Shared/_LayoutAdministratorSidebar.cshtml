@@ -1,0 +1,21 @@
+﻿<div id="adminSidebar">
+    <aside class="left-sidebar">
+        <div class="scroll-sidebar">
+            <div class="user-profile">
+                <div class="profile-img"> <img src="~/assets/images/icon/pikobar.jpg" alt="user" /> </div>
+                <div class="profile-text">
+                    <a href="#" class="dropdown-toggle link u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">@ViewBag.FullName <span class="caret"></span></a>
+                    @Html.Partial("_LayoutAdministratorSidebarProfileMenu")
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                @Html.Partial("_LayoutAdministratorMenu")
+            </nav>
+        </div>
+        <div class="sidebar-footer">
+            <a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+            <a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
+            <a href="@Url.Action("LogOff", "Account")" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+        </div>
+    </aside>
+</div>
