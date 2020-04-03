@@ -15,7 +15,7 @@ namespace Training.Models
         public int Wheel { get; set; }
         public string Color { get; set; }
         public string Fuel { get; set; }
-        public int Capacity { get; set; }
+        public Capacity Capacity { get; set; }
         public string RegistrationNumber { get; set; }
         public string Year { get; set; }
         public Category Category { get; set; }
@@ -24,6 +24,12 @@ namespace Training.Models
     {
         [Key]
         public string IdCategory { get; set; }
+        public string Title { get; set; }
+    }
+    public class Capacity
+    {
+        [Key]
+        public string IdCapacity { get; set; }
         public string Title { get; set; }
     }
 }

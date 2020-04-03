@@ -63,7 +63,7 @@ namespace Training.Controllers
                     {
                         IdVehicle = Guid.NewGuid().ToString(),
                         Name = addVehicle.Name,
-                        Capacity = addVehicle.Capacity,
+                        //Capacity = addVehicle.Capacity,
                         Category = category,
                         Color = addVehicle.Color,
                         Descriptions = addVehicle.Descriptions,
@@ -139,7 +139,7 @@ namespace Training.Controllers
                     vehicle.Name = editVehicle.Name;
                     vehicle.Wheel = editVehicle.Wheel;
                     vehicle.Descriptions = editVehicle.Descriptions;
-                    vehicle.Capacity = editVehicle.Capacity;
+                    //vehicle.Capacity = editVehicle.Capacity;
                 }
                 db.Entry(vehicle).State = EntityState.Modified;
                 db.SaveChanges();
